@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<body>
+    <h1>Qual sua cidadania</h1>
+    <input type="text" name="txnac" id="txnac">
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function buscar() {
+        
+        var txnac = window.document.getElementById('txnac')
+        var res = window.document.querySelector('div#res')
+        var nacio = txnac.value
+        res.innerHTML = `<p> Você mora em  = ${nacio} </p>` 
+
+        if (nacio === 'Brasil'){
+        res.innerHTML += '<p> Você é brasileiro !!!</p>'
+        } else {
+            res.innerHTML += '<p> Você é estrangeiro !!!</p>'
+        }
+
+
+    }
+
+    </script>
+    
+</body>
+</html>
